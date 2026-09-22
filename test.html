@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>DANI CONTROL CENTER</title>
+
+<style>
+
+body {
+    background:#071a3d;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    padding:30px;
+}
+
+h1 {
+    text-shadow:0 0 20px #4da6ff;
+}
+
+button {
+    background:#0b3d91;
+    color:white;
+    border:2px solid #4da6ff;
+    padding:15px 25px;
+    margin:10px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover {
+    background:#1769d1;
+    box-shadow:0 0 20px #4da6ff;
+    transform:scale(1.05);
+}
+
+.card {
+    background:#0b2554;
+    border:2px solid #4da6ff;
+    border-radius:15px;
+    padding:20px;
+    margin:25px auto;
+    max-width:700px;
+    text-align:left;
+}
+
+.card h2 {
+    text-align:center;
+}
+
+input {
+    background:#06142f;
+    color:white;
+    border:2px solid #4da6ff;
+    padding:15px;
+    width:80%;
+    max-width:500px;
+    border-radius:10px;
+    font-size:16px;
+}
+
+hr {
+    border:0;
+    border-top:1px solid #4da6ff;
+    margin:20px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>✈️ DANI CONTROL CENTER</h1>
+
+<h2>AVIATION COMMAND SYSTEM</h2>
+
+<p>Dreamer today. Captain tomorrow.</p>
+
+<button onclick="openRadar()">
+📡 FLIGHT RADAR
+</button>
+
+<button onclick="database()">
+✈️ AIRCRAFT DATABASE
+</button>
+
+<button onclick="fleet()">
+🛩️ MY FLEET
+</button>
+
+<button onclick="aboutMe()">
+👨‍✈️ ABOUT ME — DANI
+</button>
+
+<div id="database"></div>
+
+
+<script>
+
+function openRadar() {
+
+window.open(
+"https://www.flightradar24.com/",
+"_blank"
+);
+
+}
+
+
+function database() {
+
+document.getElementById("database").innerHTML = `
+
+<h2>✈️ AIRCRAFT DATABASE 2.0</h2>
+
+<input
+id="searchBox"
+type="text"
+placeholder="🔎 Search aircraft..."
+onkeyup="searchAircraft()">
+
+<div id="aircraftList">
+
+
+<div class="card aircraft">
+
+<h2>🛫 Airbus A320</h2>
+
+<p>⚡ TOP SPEED: Mach 0.82</p>
+<p>📏 WINGSPAN: 35.8 m</p>
+<p>🛫 RANGE: ~6,200 km</p>
+<p>🏔️ MAX ALTITUDE: ~39,000 ft</p>
+<p>⚙️ ENGINES: CFM56 / IAE V2500</p>
+<p>📅 FIRST FLIGHT: 1987</p>
+<p>👨‍✈️ CREW: 2 pilots</p>
+<p>🎧 ENGINE TYPE: Turbofan</p>
+
+<p>
+💡 FUN FACT: The A320 uses digital fly-by-wire controls.
+</p>
+
+<p>🟢 DANI STATUS: LEGENDARY</p>
+
+</div>
+
+
+<div class="card aircraft">
+
+<h2>🛫 Airbus A321</h2>
+
+<p>⚡ TOP SPEED: Mach 0.82</p>
+<p>📏 WINGSPAN: 35.8 m</p>
+<p>🛫 RANGE: Up to ~7,400 km</p>
+<p>🏔️ MAX ALTITUDE: ~39,000 ft</p>
+<p>⚙️ ENGINES: CFM56 / IAE V2500</p>
+<p>📅 FIRST FLIGHT: 1993</p>
+<p>👨‍✈️ CREW: 2 pilots</p>
+<p>🎧 ENGINE TYPE: Turbofan</p>
+
+<p>
+💡 FUN FACT: The A321 is the longest member of the original A320 family.
+</p>
+
+<p>🟢 DANI STATUS: LEGENDARY</p>
+
+</div>
+
+
+<div class="card aircraft">
+
+<h2>🛫 Boeing 737</h2>
+
+<p>⚡ TOP SPEED: Mach 0.82</p>
+<p>📏 WINGSPAN: Up to 35.9 m</p>
+<p>🛫 RANGE: Depends on version</p>
+<p>🏔️ MAX ALTITUDE: ~41,000 ft</p>
+<p>⚙️ ENGINES: CFM turbofans on many versions</p>
+<p>📅 FIRST FLIGHT: 1967</p>
+<p>👨‍✈️ CREW: 2 pilots</p>
+<p>🎧 ENGINE TYPE: Turbofan</p>
+
+<p>
+💡 FUN FACT: The 737 family is one of the most widely used jet airliner families.
+</p>
+
+<p>🟢 DANI STATUS: LEGENDARY</p>
+
+</div>
+
+
+<div class="card aircraft">
+
+<h2>🛫 Boeing 777</h2>
+
+<p>⚡ TOP SPEED: Mach 0.89</p>
+<p>📏 WINGSPAN: Up to 64.8 m</p>
+<p>🛫 RANGE: Up to ~15,800 km</p>
+<p>🏔️ MAX ALTITUDE: ~43,100 ft</p>
+<p>⚙️ ENGINES: GE / Rolls-Royce / Pratt & Whitney</p>
+<p>📅 FIRST FLIGHT: 1994</p>
+<p>👨‍✈️ CREW: 2 pilots</p>
+<p>🎧 ENGINE TYPE: High-bypass turbofan</p>
+
+<p>
+💡 FUN FACT: The 777 is famous for long-distance international flights.
+</p>
+
+<p>🟢 DANI STATUS: LEGENDARY</p>
+
+</div>
+
+
+<div class="card aircraft">
+
+<h2>🛩️ C-130 Hercules</h2>
+
+<p>⚡ TOP SPEED: ~345 knots</p>
+<p>📏 WINGSPAN: 40.4 m</p>
+<p>🛫 RANGE: ~3,800 km</p>
+<p>🏔️ MAX ALTITUDE: ~23,000 ft</p>
+<p>⚙️ ENGINES: 4 turboprops</p>
+<p>📅 FIRST FLIGHT: 1954</p>
+<p>🎧 ENGINE TYPE: Turboprop</p>
+
+<p>
+💡 FUN FACT: The C-130 can operate from relatively short airfields.
+</p>
+
+<p>🟢 DANI STATUS: MILITARY LEGEND</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+function searchAircraft() {
+
+let search = document
+.getElementById("searchBox")
+.value
+.toLowerCase();
+
+let aircraft = document
+.querySelectorAll(".aircraft");
+
+aircraft.forEach(function(card) {
+
+let name = card
+.querySelector("h2")
+.innerText
+.toLowerCase();
+
+if (name.includes(search)) {
+
+card.style.display = "block";
+
+} else {
+
+card.style.display = "none";
+
+}
+
+});
+
+}
+
+
+function fleet() {
+
+document.getElementById("database").innerHTML = `
+
+<div class="card">
+
+<h2>✈️ WHAT I CATCH IN VARNA WHEN I WAS ON HOLIDAY!</h2>
+
+<p>📍 There's an airport in Varna, Bulgaria 🇧🇬</p>
+
+<hr>
+
+<p>🛫 <b>9 times</b> — Airbus A321</p>
+
+<p>🛫 <b>4 times</b> — Boeing 737</p>
+
+<p>🛫 <b>3 times</b> — Airbus A320-232</p>
+
+<p>🛩️ <b>1 time</b> — Cessna Citation Latitude</p>
+
+<p>🛩️ <b>1 time</b> — Bombardier CRJ-145</p>
+
+<p>🛫 <b>1 time</b> — Airbus A320-214</p>
+
+<p>🛫 <b>5 times</b> — Wizz Air A321neo</p>
+
+<hr>
+
+<h2>📊 TOTAL AIRCRAFT CAUGHT: 24</h2>
+
+<p>😊 That's all!</p>
+
+</div>
+
+`;
+
+}
+
+
+function aboutMe() {
+
+document.getElementById("database").innerHTML = `
+
+<div class="card">
+
+<h2>👨‍✈️ ABOUT ME — DANI</h2>
+
+<hr>
+
+<p>✈️ <b>AVIATION ENTHUSIAST</b></p>
+
+<p>🛫 Favorite aircraft: Airbus A320 & A321</p>
+
+<p>📡 Enjoys Flightradar24 and plane spotting</p>
+
+<p>🎮 Aviation simulator player</p>
+
+<p>🇧🇬 Bulgarian aviation fan</p>
+
+<p>🧑‍✈️ Future pilot</p>
+
+<p>🌍 Loves discovering the world of aviation</p>
+
+<hr>
+
+<h2>💬 MY MOTTO</h2>
+
+<p style="text-align:center; font-size:20px;">
+"Dreamer today. Captain tomorrow."
+</p>
+
+<hr>
+
+<p style="text-align:center;">
+🔒 No personal information displayed.
+</p>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
